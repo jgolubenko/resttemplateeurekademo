@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: cloudfoundry
+eureka:
+  client:
+    service-url:
+      defaultZone: http://my-eureka/eureka/

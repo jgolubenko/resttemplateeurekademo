@@ -1,0 +1,8 @@
+---
+env:
+  SPRING_PROFILES_ACTIVE: cloudfoundry
+applications:
+- name: eureka
+  memory: 1024M
+  host: my-eureka
+  domain: cfapps.pez.pivotal.io

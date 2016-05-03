@@ -1,0 +1,8 @@
+---
+env:
+  SPRING_PROFILES_ACTIVE: cloudfoundry
+applications:
+- name: hello-world
+  memory: 1024M
+  host: hello-worlds
+  domain: cfapps.pez.pivotal.io

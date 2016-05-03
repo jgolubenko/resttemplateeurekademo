@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: date-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: cloudfoundry
+eureka:
+  instance:
+    non-secure-port: 80
+    hostname: ${vcap.application.uris[0]}
+  client:
+    service-url:
+      defaultZone: http://my-eureka.cfapps.pez.pivotal.io/eureka/
